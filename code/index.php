@@ -1,162 +1,66 @@
 <?php
 
-// single dimension array
-// $stuff = array("Chuck","WA4E","Laravel");
-// print_r($stuff);
-// echo "<br>";
-
-// $stuff[4] = "hello";
-
-// print_r($stuff);
-// echo "<br>";
-
-// $stuff[] = "PHP";
-// print_r($stuff);
-// echo "<br>";
-// $total_length = count($stuff);
-// $last = $total_length -3;
-// echo $stuff[$last];
-// echo "<br>";
-// echo "<br>";
-
-// echo $stuff[2], "\n";
-// echo "<br>";
-
-// echo $stuff[3], "\n";
-
-
-
-
-// multiple dimension array
-// $stuff = array("student" => "bilal",
-//                 "course" => "Web");
-
-// print_r($stuff);
-// $stuff["tech"] = "PHP";
-// echo "<br>";
-
-// print_r($stuff);
-
-// $stuff["designation"] = "Laravel Team Lead";
-
-// echo "<br>";
-
-// print_r($stuff);
-// $stuff["designation"] = "Web Team Lead";
-
-// echo "<br>";
-// print_r($stuff);
-
-// // echo $stuff;
-
-// print_r($stuff);
-// echo "<br>";
-
-// $thing = FALSE;
-// echo("One\n");
-// echo "<br>";
-
-// print_r($thing);
-// // echo "<br>";
-
-// echo("Two\n");
-// echo "<br>";
-
-// var_dump($thing);
-
-
-$marks = array(10, 20, 30, 40, 50, 60, 70);
-//  echo $marks[5]; //get
-//  $marks[5] = 46; //update
-//  $marks[] = 43; // create or insert
-//  unset($marks[6]); //delete
-
-// $result = [
-//     "math" => 80,
-//      "physics" => 90,
-//     "chemistry" => 100,
-//     "computer" => 195,
-// ];
-// $students['Bilal']['computer']. $students['Usman']['computer'];
-echo  $students['Bilal']['islamiat'] ?? "not found";
-$students = [
-    'Bilal' => [
-        "math" => 80,
-        "physics" => 90,
-        "chemistry" => 100,
-        "computer" => 195
-    ],
-    'Usman' => [
-        "math" => 80,
-        "physics" => 90,
-        "chemistry" => 100,
-        "computer" => 195,
-        "islamiat" => 90,
-        "test" => 43
-    ],
-    'Amir' => [
-        "math" => 80,
-        "physics" => 90,
-        "chemistry" => 100,
-        "computer" => 195,
-        "test" => [
-            "test1" => 123,
-            "test2" => 123
-        ]
-    ]
-];
-
-
-$students['amir']['islamiat'] = 100; // create or update
-unset($students['amir']['islamiat']); //delete
-echo $students['amir']['test']['test1']; //get 
-
-foreach ($students as $student => $marks) {
-    echo "Student Name:  $student";
-    echo "<br>";
-    // if ($student == "Amir") {
-    //     echo $marks['computer'];
+// function greet($test = 1,$test1 = 2){
+//     echo "Hello World";
+//     echo "<br>";
+// }
+// function greet($test, $test2){
+//     echo "Hello World";
+//     echo "<br>";
+// }
+    // function sum($test, $test2){
+    //     echo $test + $test2;
+    //     echo "<br>";
+    //     return "asff";
     // }
-    // if ($student == "Usman") {
-    //     echo $marks['chemistry'];
-    // }
-    foreach ($marks as $subject => $grade) {
-        echo "$subject :";
-        // if ($subject == 'test') {
 
-        if (is_array($grade)) {
-            foreach ($grade as $key => $test) {
-                echo " =>  $key :  $test";
-                echo "<br>";
-            }
-            // } 
-        } else {
-            print_r($grade);
-        }
-        echo "<br>";
-    }
-    echo "<br>";
-}
-// $students = array(
-//     'Bilal' =>    array(
-//         "math" => 80,
-//         "physics" => 90,
-//         "chemistry" => 100,
-//         "computer" => 195
-//     ),
-//     'Usman' => array(
-//         "math" => 80,
-//         "physics" => 90,
-//         "chemistry" => 100,
-//         "computer" => 195
-//     ),
-//     'Amir' => array(
-//         "math" => 80,
-//         "physics" => 90,
-//         "chemistry" => 100,
-//         "computer" => 195
-//     )
-// );
+    // greet(1,2);
+    // greet();
 
-// // echo $products['pens']['marker'];
-// echo "<br>";
+    // $result =  sum('5',2);
+    // echo $result;
+
+
+
+    // function howdy($lang) {
+    //     if ( $lang == 'es' ){
+    //         return "Hola";
+    //     }
+    //     else if ( $lang == 'fr' ){
+    //         return "Bonjour";
+    //     } 
+    //     else{   
+    //         return "Hello";
+    //     }
+       
+    //    }
+
+
+    //    print howdy('es') . " Glenn\n";
+    //    echo "<br>";
+    //    print howdy('fr') . " Sally\n";
+    //    echo "<br>";
+    //    print howdy('ur') . " Bilal\n";
+
+
+
+    // function double($alias) {
+    //     $alias = $alias * 2;
+    //     return $alias;
+    //    }
+    //    $val = 10;
+    //    $dval = double($val);
+    //    echo "Value = $val Doubled = $dval\n";
+
+
+       function double(&$alias) {
+        $alias = $alias * 2;
+        return $alias;
+       }
+       $val = 10;
+       $dval = double($val);
+       $dval2 = double($dval);
+
+       echo "Value = $val Doubled = $dval\n and 2nd val = $dval2";
+
+?>
