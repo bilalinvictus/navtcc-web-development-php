@@ -8,59 +8,74 @@
 //     echo "Hello World";
 //     echo "<br>";
 // }
-    // function sum($test, $test2){
-    //     echo $test + $test2;
-    //     echo "<br>";
-    //     return "asff";
-    // }
+// function sum($test, $test2){
+//     echo $test + $test2;
+//     echo "<br>";
+//     return "asff";
+// }
 
-    // greet(1,2);
-    // greet();
+// greet(1,2);
+// greet();
 
-    // $result =  sum('5',2);
-    // echo $result;
-
-
-
-    // function howdy($lang) {
-    //     if ( $lang == 'es' ){
-    //         return "Hola";
-    //     }
-    //     else if ( $lang == 'fr' ){
-    //         return "Bonjour";
-    //     } 
-    //     else{   
-    //         return "Hello";
-    //     }
-       
-    //    }
-
-
-    //    print howdy('es') . " Glenn\n";
-    //    echo "<br>";
-    //    print howdy('fr') . " Sally\n";
-    //    echo "<br>";
-    //    print howdy('ur') . " Bilal\n";
+// $result =  sum('5',2);
+// echo $result;
 
 
 
-    // function double($alias) {
-    //     $alias = $alias * 2;
-    //     return $alias;
-    //    }
-    //    $val = 10;
-    //    $dval = double($val);
-    //    echo "Value = $val Doubled = $dval\n";
+// function howdy($lang, $name = "Bilal")
+// {
+//     if ($lang == 'es') {
+//         $result =  "Hola";
+//     } else if ($lang == 'fr') {
+//         $result = "Bonjour";
+//     } else {
+//         $result = "Hello";
+//     }
+//     return "$result  $name";
+// }
 
 
-       function double(&$alias) {
-        $alias = $alias * 2;
-        return $alias;
-       }
-       $val = 10;
-       $dval = double($val);
-       $dval2 = double($dval);
+// print howdy('es');
+// echo "<br>";
+// print howdy("Sally", 'fr');
+// echo "<br>";
+// print howdy('ur', "Bilal");
+// echo "<br>";
 
-       echo "Value = $val Doubled = $dval\n and 2nd val = $dval2";
 
-?>
+
+// function double($alias) {
+//     $alias = $alias * 2;
+//     return $alias;
+//    }
+//    $val = 10;
+//    $dval = double($val);
+//    echo "Value = $val Doubled = $dval\n";
+
+
+// function double(&$alias)
+// {
+//     $alias = 90;
+//     return 40;
+// }
+// $val = 10;
+// $dval = double($val);
+// // $dval2 = double($dval);
+
+// echo "Value = $val Doubled = $dval\n and 2nd val";
+
+
+
+$val = 10;
+
+function tryzap()
+{
+    global $val;
+    $val = 100;
+    $cal2 = 200;
+    return $cal2;
+}
+
+
+echo tryzap();
+echo "TryZap = $val\n";
