@@ -66,17 +66,14 @@
 
 
 $marks = array(10, 20, 30, 40, 50, 60, 70);
- echo $marks[5]; //get
- $marks[5] = 46; //update
- $marks[] = 43; // create or insert
- unset($marks[6]); //delete
+//  echo $marks[5]; //get
+//  $marks[5] = 46; //update
+//  $marks[] = 43; // create or insert
+//  unset($marks[6]); //delete
 
- $students['amir']['islamiat'] = 100; // create or update
- unset($students['amir']['islamiat']) //delete
- echo $students['amir']['test']['test1'] //get
 // $result = [
 //     "math" => 80,
-//     "physics" => 90,
+//      "physics" => 90,
 //     "chemistry" => 100,
 //     "computer" => 195,
 // ];
@@ -108,6 +105,11 @@ $students = [
         ]
     ]
 ];
+
+
+$students['amir']['islamiat'] = 100; // create or update
+unset($students['amir']['islamiat']); //delete
+echo $students['amir']['test']['test1']; //get 
 
 foreach ($students as $student => $marks) {
     echo "Student Name:  $student";
